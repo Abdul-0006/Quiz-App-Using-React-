@@ -68,7 +68,6 @@
 }
 
 .container button {
-  
   padding: 12px 25px;
   border: none;
   border-radius: 6px;
@@ -95,4 +94,44 @@
   margin-top: 15px;
   color: #b2bec3;
   font-size: 16px;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+.container .Correct {
+  background-color: #00ad3a;
+  border: #00d397;
+  animation: pulse 0.3s ease;
+}
+.container .Wrong {
+  background-color: #e30000;
+  border: #ff4a4a;
+  animation: shake 0.3s ease;
+}
+.container .Correct:hover {
+  background-color: #00ad3a;
+}
+.container .Wrong:hover {
+  background-color: #e30000;
 }
